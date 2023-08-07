@@ -4542,18 +4542,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bfe09a5073c43a78ee94d52502ffc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos0: {fileID: 187807270}
-  pos1: {fileID: 874124671}
-  pos2: {fileID: 1407424868}
-  pos3: {fileID: 1041955999}
-  pos4: {fileID: 1692101099}
-  pos5: {fileID: 681177327}
-  pos6: {fileID: 1562773070}
-  pos7: {fileID: 969698029}
-  pos8: {fileID: 433764997}
-  pos9: {fileID: 1224193954}
+  invPosition:
+  - {fileID: 187807270}
+  - {fileID: 874124671}
+  - {fileID: 1407424868}
+  - {fileID: 1041955999}
+  - {fileID: 1692101099}
+  - {fileID: 681177327}
+  - {fileID: 1562773070}
+  - {fileID: 969698029}
+  - {fileID: 433764997}
+  - {fileID: 1224193954}
   pressE: {fileID: 2110053086}
-  eventsystem: {fileID: 553480417}
+  inventory: {fileID: 0}
 --- !u!114 &553480417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4566,7 +4567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f952a425c5ce43148e08b5cf74e1b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodsCollider: {fileID: 0}
+  hasItem: 00000000000000000000
 --- !u!1 &556855706
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,7 +10282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1351145047}
-  collider: {fileID: 1351145048}
   itemList: {fileID: 553480416}
   itemNum: 0
 --- !u!1 &1385545469
@@ -13053,7 +13053,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1761134432}
-  collider: {fileID: 1761134434}
   itemList: {fileID: 553480416}
   itemNum: 1
 --- !u!135 &1761134434
