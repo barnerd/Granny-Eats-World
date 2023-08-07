@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (endDemo == true)
+        if (endDemo)
         {
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
             {
