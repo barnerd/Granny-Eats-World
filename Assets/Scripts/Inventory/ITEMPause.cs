@@ -21,17 +21,31 @@ public class ITEMPause : MonoBehaviour
         }
     }
 
-    //addItem
+    /// <summary>
+    /// Add an item from the inventory
+    /// </summary>
+    /// <param name="itemVal">which slot to remove</param>
     public void AddItem(int itemVal)
     {
         if (invPosition != null)
         {
             invPosition[itemVal].SetActive(true);
-            inventory.NewItem(itemVal);
+            inventory.AddItem(itemVal);
         }
     }
 
-    //subtractItem
+    /// <summary>
+    /// Remove an item from the inventory
+    /// </summary>
+    /// <param name="itemVal">which slot to remove</param>
+    public void SubtractItem(int itemVal)
+    {
+        if (invPosition != null)
+        {
+            invPosition[itemVal].SetActive(false);
+            inventory.RemoveItem(itemVal);
+        }
+    }
 
     public void Show()
     {
@@ -43,4 +57,3 @@ public class ITEMPause : MonoBehaviour
         isColliding = false;
     }
 }
-
