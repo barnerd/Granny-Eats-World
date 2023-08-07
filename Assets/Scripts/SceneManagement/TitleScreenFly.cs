@@ -35,7 +35,7 @@ public class TitleScreenFly : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("START");
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
         }
         else

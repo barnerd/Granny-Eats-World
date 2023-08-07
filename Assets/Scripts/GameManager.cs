@@ -87,8 +87,8 @@ public class GameManager : MonoBehaviour
         frogPrince.SetActive(false);
         hanselSecondMeet.SetActive(false);
         hanselThirdMeet.SetActive(true);
+        pussThirdMeet.SetActive(false);
         pussFourthMeet.SetActive(true);
-        pussThirdMeet.SetActive(true);
     }
 
     public void Endgame()
