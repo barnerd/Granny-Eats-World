@@ -27,7 +27,7 @@ public class ITEMPause : MonoBehaviour
     /// <param name="itemVal">which slot to remove</param>
     public void AddItem(int itemVal)
     {
-        if (invPosition != null)
+        if (invPosition != null && itemVal >= 0 && itemVal < 10)
         {
             invPosition[itemVal].SetActive(true);
             inventory.AddItem(itemVal);

@@ -11,11 +11,17 @@ public class ITEMInventory : MonoBehaviour
 
     public void AddItem(int itemVal)
     {
-        hasItem[itemVal] = true;
+        if (hasItem != null && itemVal >= 0 && itemVal < 10)
+        {
+            hasItem[itemVal] = true;
+        }
     }
 
     public void RemoveItem(int itemVal)
     {
-        hasItem[itemVal] = false;
+        if (hasItem != null && itemVal >= 0 && itemVal < 10)
+        {
+            hasItem[itemVal] = false;
+        }
     }
 }
