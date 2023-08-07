@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: f2f91be45a3a341d4bf0fff5beb2ede9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedFly_Full_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994d2243acb984c4c85cd956c31580b1
+      internalID: -2071249473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_1
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47691ee2a27bc40ee869dec1e8b664d1
+      internalID: 1284789270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_2
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ab4ee4bb2f04ee49b52ac61c54d9b3
+      internalID: -650541696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_3
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390b9ec5b0ec54c0ebb45bd96fef1bc0
+      internalID: -1214207428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_4
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa4cb73cc4e241e4a2c2286e9fbe3b5
+      internalID: 433419540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_5
+      rect:
+        serializedVersion: 2
+        x: 7925
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56e990f769df4edba6869487c3cdfe7
+      internalID: -234748075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_6
+      rect:
+        serializedVersion: 2
+        x: 9510
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd06ac3886134a4f9ff3f39e61cf30d
+      internalID: -210753535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_7
+      rect:
+        serializedVersion: 2
+        x: 11095
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4846a19440094447293893e85c8517d4
+      internalID: 1483417151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_8
+      rect:
+        serializedVersion: 2
+        x: 12680
+        y: 5550
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7744f5305ce46c1919405f79442b58
+      internalID: -1271361016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7f4afc705854d8b851a2261cc82161
+      internalID: 2022601252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_10
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4b5fb52d6d040ec900bb5b00bbc2c3
+      internalID: -553874266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_11
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1e438816b314c6087ac698a74bcaad
+      internalID: 1857749123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_12
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad99ad0c3defe4fa1b31f8e31c43d285
+      internalID: -947730163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_13
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff1192b1a4c048bf92be9a256e429c5
+      internalID: -244228399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_14
+      rect:
+        serializedVersion: 2
+        x: 7925
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea7d73a31f0d46e89544845e0699f8b
+      internalID: 2036558952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_15
+      rect:
+        serializedVersion: 2
+        x: 9510
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf856c2b74134beab2468927dd31e65
+      internalID: -667171239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_16
+      rect:
+        serializedVersion: 2
+        x: 11095
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1a9b89e3bd34faa82de2e609445716
+      internalID: 859690948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_17
+      rect:
+        serializedVersion: 2
+        x: 12680
+        y: 3700
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993291cddad674f33bdcf0bbd34c0713
+      internalID: 776712066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798487848dbb841018ffab3f0eab887c
+      internalID: -1157728834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_19
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcf3718df6a94293aa874a2d5f88958
+      internalID: 733414641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_20
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4f65c688e5f45f88438f4c835fa7ee
+      internalID: -748555196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_21
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d091758282f4e0ebd22cc4d77cb5e7
+      internalID: -1823888454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_22
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49dd13876ca44e2caae10b9b5f1282c
+      internalID: 1950322412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_23
+      rect:
+        serializedVersion: 2
+        x: 7925
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b12ee40a3feb49d59308d4fe3f328fd
+      internalID: 94147871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_24
+      rect:
+        serializedVersion: 2
+        x: 9510
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fe1a1daaf2c4f0daabcad022525519
+      internalID: 879742006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_25
+      rect:
+        serializedVersion: 2
+        x: 11095
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c6002dbbf0f488ebde2d33ac5c1bb8
+      internalID: -2117439224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_26
+      rect:
+        serializedVersion: 2
+        x: 12680
+        y: 1850
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20379548884c4a1b8e76bfe9861be9a
+      internalID: 1038088288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f47580595c4486fa5fba2252501d75
+      internalID: 1450957030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_28
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a8162ab637a4ccc9846c6a24ac1da2
+      internalID: 859245646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_29
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a71e3281efc94b50b503d52c076bc2e
+      internalID: 2092929197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_30
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d5233274b914ddb934ca26a544d2f6
+      internalID: -210230578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_31
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ed689d7dfdb48f78b0a6d9843f5e1a
+      internalID: -449323040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_32
+      rect:
+        serializedVersion: 2
+        x: 7925
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee4a81260fd24030b12533bbedc87fe
+      internalID: 1863157180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_33
+      rect:
+        serializedVersion: 2
+        x: 9510
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46264857a19514ec5ae7c7bd665113b5
+      internalID: 2012050705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_34
+      rect:
+        serializedVersion: 2
+        x: 11095
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad466f59c2c94435b60cec419fe7b98
+      internalID: 1274706791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFly_Full_35
+      rect:
+        serializedVersion: 2
+        x: 12680
+        y: 0
+        width: 1585
+        height: 1850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8affd2781854131aa06275c73b7735
+      internalID: -1940046072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 097a71ec1fee44101b92841b61998886
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RedFly_Full_0: -2071249473
+      RedFly_Full_1: 1284789270
+      RedFly_Full_10: -553874266
+      RedFly_Full_11: 1857749123
+      RedFly_Full_12: -947730163
+      RedFly_Full_13: -244228399
+      RedFly_Full_14: 2036558952
+      RedFly_Full_15: -667171239
+      RedFly_Full_16: 859690948
+      RedFly_Full_17: 776712066
+      RedFly_Full_18: -1157728834
+      RedFly_Full_19: 733414641
+      RedFly_Full_2: -650541696
+      RedFly_Full_20: -748555196
+      RedFly_Full_21: -1823888454
+      RedFly_Full_22: 1950322412
+      RedFly_Full_23: 94147871
+      RedFly_Full_24: 879742006
+      RedFly_Full_25: -2117439224
+      RedFly_Full_26: 1038088288
+      RedFly_Full_27: 1450957030
+      RedFly_Full_28: 859245646
+      RedFly_Full_29: 2092929197
+      RedFly_Full_3: -1214207428
+      RedFly_Full_30: -210230578
+      RedFly_Full_31: -449323040
+      RedFly_Full_32: 1863157180
+      RedFly_Full_33: 2012050705
+      RedFly_Full_34: 1274706791
+      RedFly_Full_35: -1940046072
+      RedFly_Full_4: 433419540
+      RedFly_Full_5: -234748075
+      RedFly_Full_6: -210753535
+      RedFly_Full_7: 1483417151
+      RedFly_Full_8: -1271361016
+      RedFly_Full_9: 2022601252
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
