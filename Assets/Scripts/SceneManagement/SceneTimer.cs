@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class IntroTimer : MonoBehaviour
+public class SceneTimer : MonoBehaviour
 {
     public int scene;
-    public float timer = 212f;
+    public float timer;
+
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     // Update is called once per frame
     void Update()
@@ -12,7 +17,7 @@ public class IntroTimer : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(scene);
         }
     }
 }
