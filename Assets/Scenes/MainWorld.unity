@@ -2899,7 +2899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1f848971ab840c392b7873b3a1edd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightCollider: {fileID: 349592394}
   endScreen: {fileID: 937760644}
 --- !u!65 &349592394
 BoxCollider:
@@ -11262,7 +11261,7 @@ MonoBehaviour:
   gretelFifthMeet: {fileID: 565017061}
   lanternMessage: {fileID: 932393898}
   darkWall: {fileID: 704189318}
-  endScreen: {fileID: 0}
+  endScreen: {fileID: 937760644}
   endWall: {fileID: 349592392}
 --- !u!4 &1509968623
 Transform:
@@ -13291,7 +13290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1f848971ab840c392b7873b3a1edd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightCollider: {fileID: 1786932341}
   endScreen: {fileID: 937760644}
 --- !u!1 &1788327173
 GameObject:
