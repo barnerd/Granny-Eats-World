@@ -1,0 +1,350 @@
+﻿title: Start
+---
+<<set $Lantern to false>>
+<<set $MetHansel to false>>
+<<set $FrogHead to false>>
+<<set $GingerbreadMan to false>>
+<<set $GretelQuest to false>>
+Red: I have two of the three ingredients the witch needs to make a potion to cure Granny.
+Red: The only thing left is… “The Last Hope of a Lost Child”.
+Red: That seems unnecessarily creepy and mysterious.
+Red: Let’s see… If a child is lost, what would give them hope?
+Red: Probably anything that would help them find their way home!
+Red: I’ll just have to ask around.
+===
+title: PussWillKillYou
+---
+Red: Aww, a kitty cat with little kitty cat shoes!
+Red: He thinks he’s people!
+Puss: I know thirty-eight ways to kill a man in under ten seconds.
+Puss: Would you like a demonstration?
+Red: Uh, no, thank you. Sorry!
+===
+title: FroggyWannaKiss
+---
+Frog: You! Young girl!
+Red: I’m a teenager.
+Frog: Sure, whatever. Look.
+Frog: Are you by any chance a princess?
+Red: No.
+Frog: Are you… related to a princess?
+Red: No.
+Frog: Friends with a princess?
+Red: No! What do you want?
+Frog: I am a handsome prince who has been cursed by an evil witch to live as a frog! Unless…
+Red: Unless?
+Frog: Unless I receive a kiss from a princess.
+Red: Ew!
+Frog: Or perhaps any maiden will do?
+Red: No way! Not a chance!! That is beyond grody!
+Frog: …How about just blowing me a kiss?
+Red: Literally never.
+Frog: I suppose that’s fair.
+Frog: I do secrete a large amount of mucus.
+===
+title: GretelNeedsHelp
+---
+Red: Are you okay?
+Gretel: I am not allowed to speak to strangers!
+Red: Then I’ll introduce myself.
+Red: Hi, I’m Red.
+Gretel: I am Gretel. And…
+Gretel: I am very much not okay.
+Red: Are you lost?
+Gretel: No, but my brother is!
+Red: Yes!!
+Gretel: Yes?!
+Red: I- I was just agreeing with you!
+Red: Where is he?
+Gretel: Somewhere in the dark woods.
+Gretel: Our Auntie told us never to go in there. But…
+Gretel: Hansel- my brother- has an insatiable sweet tooth.
+Gretel: He said he saw a little cookie man running into the woods.
+Red: A cookie man?
+Gretel: A cookie man!
+Red: Like a cookie-sized man?
+Gretel: A cookie-sized man made of cookie. A little gingerbread man.
+Red: But sentient?
+Red: This town is super weird…
+Gretel: Hansel ran into the woods several hours ago, I’m so worried about him!
+Red: Maybe I can help.
+Gretel: Would you really? Just please promise not to get lost yourself!
+Red: On it!
+<<set $GretelQuest to true>>
+===
+title: TooDark
+---
+<<if $Lantern is false>>
+Red: It’s way too dark in there!
+Red: If only I had some kind of night vision.
+Red: Or if mom would just let me have a cell phone already, then this wouldn’t be a problem!
+Red: Thirteen is old enough to have a phone, Mom!!!
+===
+title: PussCanHelp
+---
+<<if $GretelQuest is true>>
+Red: Um, excuse me? Mr. Cat?
+Puss: Doctor Cat
+Red: Sorry, Dr. Cat?
+Puss: Lieutenant Dr. Cat
+Red: Lieu— Really?
+Puss: Of course not. I am just a cat.
+Puss: What is your name, child?
+Red: I’m Red.
+Red: And I’m not a child, I’m a teen.
+Puss: Why have you interrupted my sunbathing, teen Red?
+Red: You have night vision, right?
+Puss: I am a cat of many talents.
+Red: I need help tracking down a child who’s lost in the dark woods.
+Red: I thought, since you can see in the dark…
+Puss: That I could guide you through the darkness.
+Red: Exactly! Would you?
+Puss: What would you give me in return?
+Ghost: Well, what do you know?
+    -> The satisfaction of a job well done.
+    Puss: Very funny!
+    Puss: But I am bored now.
+        <<jump PussWantsPayment>>
+    -> I bet you’re not even smart enough to help me.
+    Puss: Wow.
+    Puss: You are TERRIBLE at manipulation!
+    Red: I’m sorry.
+    Puss: Life is not a cartoon.
+    Puss: Do I look like I’m at war with a small prey animal?
+    Puss: Do you see me engaging in wacky antics?
+    Red: No.
+    Puss: Then I would appreciate you not treating me like a hapless fool.
+    Red: It won’t happen again.
+        <<jump PussWantsPayment>>
+    -> Head skritches?
+    Puss: Hm. An intriguing offer.
+    Puss: When was the last time you washed your hands?
+    Red: Uuuh…
+    Puss: Never mind.
+        <<jump PussWantsPayment>>
+===
+title: PussWantsPayment
+---
+Puss: This whole affair is boring.
+Puss: You are boring.
+Red: I’m sorry?
+Red: I’m just trying to keep my Granny from eating the world!
+Puss: Oh?
+Puss: Then you must be willing to make a sacrifice!
+Puss: Tell me, teen Red. What are you willing to give up for your cause?
+    ->My Hoodie.
+    Red: It’s my favorite thing I own.
+    Red: But you can have it.
+    Puss: I don’t want it.
+    Red: But-
+    Puss: A ratty old garment? Easily replaceable?
+    Puss: Are you even trying?
+    <<jump BadEnd>>
+    -> My Hair
+    Puss: You will give me your hair?
+    Red: You don’t have to take it.
+    Red: I mean I’ll shave my head.
+    Puss: Oho!
+    Puss: You realize that you would have to return to school at some point,
+    Puss: And face the social ramifications of your actions!
+    Red: Yeah. And it’ll suck.
+    Red: But it won’t be the end of the world.
+    Puss: You have yourself a deal!
+    Red: Really?!
+    Puss: I shall come to collect after your quest is complete.
+    Puss: As there is no time left in the jam to create alternate character models.
+    Puss: You may borrow my lantern, enchanted to require no oil to stay alight.
+    Red: I thought you were going to use your night vision to guide me.
+    Puss: And leave this perfect sunbeam? Not a chance.
+    Puss: If you do not return this to me, I will vomit in all of your shoes.
+    Red: *gasp* You monster!
+    Puss: Don’t mess with the cat, teen Red.
+    <<set $Lantern to true>>
+===
+title: EnterDarkWoods
+---
+Red: I thought it was gonna be way spookier in here!
+Red: Like, trees tryna grab me.
+Red: Wolves tryna eat me.
+Red: But it’s literally just The Woods: Dark Edition.
+Red: It’s child-savin’ time.
+===
+title: MeetingHansel
+---
+Hansel: Oh, Gingerbread Man~
+Hansel: Come out, come out, wherever you are!!!
+Red: Are you Hansel?
+Hansel: My Auntie says never to talk to strangers!
+Red: Isn’t the gingerbread man a stranger?
+Hansel: No, he’s a cookie.
+Red: …
+Red: My name is Red.
+Red: Your sister Gretel sent me to find you.
+Hansel: Tell her I’ll be out in a minute!
+Hansel: I still need to find that tasty little morsel!
+Hansel: He’s running around here somewhere. Can you hear him?
+Red: No.
+Hansel: He was just— *Pitterpatter* Oh!
+Hansel: Did you hear that?!
+Red: I actually did.
+Hansel: He’s so close, I can smell him!
+Red: How are you going to catch him?
+Hansel: With my cat-like reflexes!
+Red: There is no way you’re gonna catch that thing on your own.
+Hansel: Well I’m not coming out until I do!
+Red: The world is literally ending!
+Hansel: And I am literally starving!
+Red: UUUUUGGGHh.
+Red: Now I’ve gotta find a way to catch a confection!
+Red: Maybe someone in town has, like, a tiny bear trap or something.
+<<set $MetHansel to true>>
+===
+title: PussIsDone
+---
+<<if $MetHansel is true>>
+Puss: Here to return my priceless possession?
+Red: Not yet.
+Puss: Then you just enjoy being bothersome?
+Red: No?
+Red: I need help catching a Gingerbread Man.
+Puss: I’m afraid I’ve reached my limit on altruism for today.
+Puss: Not to mention Nutmeg, Sugar, Cinnamon, and Dairy, are all ingredients that can make me very sick.
+Red: You wouldn’t have to eat him.
+Puss: I might not be able to help myself.
+Puss: Sugar is one of the most addictive substances on the planet.
+Red: For real?
+Puss: Look it up.
+Puss: And leave me alone.
+===
+title: GretelWaits
+---
+<<if $MetHansel is true>>
+Gretel: Did you find my brother?! Is he okay?!
+Red: Yeah, he’s fine.
+Red: I’ve gotta give him his stupid cookie before he’ll come out, though.
+Gretel: He can be very stubborn.
+Red: Not as stubborn as me.
+===
+title: FrogCanHelp
+---
+<<if $MetHansel is true>>
+Frog: Here to bestow me a kiss, fair maiden?
+Red: Absolutely not. Get used to being a frog.
+Frog: Perhaps I shall.
+Frog: Perhaps I should begin to count my blessings.
+Frog: Perhaps I’ll start a gratitude journal!
+Red: Cool. Uh.
+Red: Do you know a way I can catch, like-
+Red: A fast little guy?
+Frog: I don’t follow.
+Red: A Gingerbread Man.
+Frog: Ah, yes! He’s a quick fellow!
+Red: Very quick! How can I catch him?
+Frog: You? Impossible! Your legs are far too short to keep up with such speed.
+Red: I know! That’s why I’m asking around!
+Red: Do you know where I can get a cookie trap?! Or a crossbow?!
+Frog: You lack the skills to use them!
+Red: You’re not helping!
+Frog: If you wish to delegate the task, I could capture the tiny treat with ease.
+Red: You could?
+Frog: My glorious tongue- another blessing- can snatch even the fastest insects in the blink of an eye.
+Red: That’s perfect!
+Frog: Only if you enjoy consuming insects. Which I do.
+Red: So you’ll help me catch him?
+Frog: No.
+Red: No?
+Frog: Why should I?
+Frog: How would such an act benefit me?
+    -> I’ll help you find a princess.
+    Frog: Do you know any?
+    Red: I think I met one earlier today.
+    Red: But she was up in a tower, so I couldn’t see if she had a crown or anything.
+    Frog: Worth a try!
+    Frog: Let us go capture a man!
+    Red: Could we phrase that differently?
+    Frog: Onwards, maiden!
+    <<set $FrogHead to true>>
+    -> I'll get the witch to undo your curse.
+    Frog: Excuse me? You know the witch of the woods?
+    Red: Yeah! She’s helping me make a potion to cure my Granny!
+    Frog: I knew there was something off about you!
+    Frog: You are in league with those who use dark magicks!
+    Frog: BEGONE DARK WITCH!
+    Frog: BEGONE!!
+    <<jump BadEnd>>
+===
+title: FrogForest
+---
+<<if $FrogHead is true>>
+Frog: I smell… Fresh baked cookies. He’s close.
+Red: You can smell?
+Frog: Another blessing for my gratitude journal.
+===
+title: FrogCatch
+---
+// Sound- Pitter Patter
+Frog: Wait!
+// Frog catches gingerbread man
+Red: Woah!
+GingerbreadMan: HEY!! YOU CAN’T CATCH ME!!!
+Frog: I duth did!
+Red: Don’t talk with your mouth full.
+GingerbreadMan: AAAAGH! NOT COOL!!
+Red: Hansel is gonna flip.
+<<set $GingerbreadMan to true>>
+===
+title: SavingHansel
+---
+<<if $GingerbreadMan is true>>
+Hansel: You caught him!
+Red: Yup. Now can we go?
+Hansel: Yes, ma’am!
+Red: Terrific
+===
+title: HanselGretelReunited
+---
+Gretel: Hansel! You’re okay!
+Hansel: Of course I am! I told you I would be.
+Gretel: Thank you so much, Red!
+Red: Yeah sure whatever. Hey, Hansel?
+Hansel: Cookie time?
+Red: Soon! But first, what would you say gave you hope when you were lost in there?
+Hansel: The sweet smell of Gingerbread.
+Red: That’s… Not a physical object.
+Red: Would you call it your last hope?
+Hansel: Hmm. I guess if I got really lost-
+Red: You did.
+Hansel: -Then I would have to rely on my breadcrumbs!
+Red: Um.
+Hansel: I left a trail of breadcrumbs behind me in case I got lost-
+Red: Which you did.
+Hansel: -Then I could just follow the breadcrumbs back out of the woods!
+Red: But… I didn’t see any breadcrumbs.
+Hansel: Huh. I guess I forgot to drop them!
+Gretel: Hansel!
+Red: Can I have them?
+Hansel: Will you give me the cookie man?
+Red: Of course.
+//Red recieves Breadcrumbs
+Red: Alright, Froggy, give the boy his cookie.
+//Frog opens his mouth, the GMan springs free and runs away
+GingerbreadMan: AHAHAHAHA!! SEE YA, SUCKERS!!
+Hansel: My cookie man!
+Gretel: *Sigh*
+Gretel: I wanted to eat him too.
+<<jump GoodEnd>>
+===
+title: BadEnd
+---
+Red: That was my only chance to get the final ingredient!
+Red: Can the witch make the potion with only two ingredients?!
+//Failure Screen, End Credits, Replay/Main Menu
+===
+title: GoodEnd
+---
+//Red walks a little bit away from Hansel and Gretel
+Red: Finally! I have all three ingredients!
+Red: Now the witch can finish her potion, and I can save Granny!
+Red: I hope I’m not too late!!
+//Success Screen, End Credits, Replay/Main Menu
+===
