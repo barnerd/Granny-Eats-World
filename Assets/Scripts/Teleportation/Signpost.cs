@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(FadeInOut))]
 public class Signpost : MonoBehaviour
 {
     public Transform destination;
@@ -9,6 +10,7 @@ public class Signpost : MonoBehaviour
     public TeleportationUI teleportationUI;
 
     private bool isNearby;
+    private Vector3 destinationPosition;
 
     void Awake()
     {
@@ -24,17 +26,15 @@ public class Signpost : MonoBehaviour
             {
                 if (teleportationUI.IsActive)
                 {
-                    Vector3 destinationPosition = teleportationUI.GetSelectedDestination();
+                    destinationPosition = teleportationUI.GetSelectedDestination();
 
                     // Hide UI
                     teleportationUI.SetActive(null, false);
 
                     if (destinationPosition != Vector3.zero)
                     {
-                        // Fade out
-                        // Teleport
-                        GameManager.instance.player.transform.position = destinationPosition;
-                        // Fade in
+                        // Fade In Out & Teleport
+                        StartCoroutine(GetComponent<FadeInOut>().FadeOut(Teleport));
                     }
                 }
                 else
@@ -43,6 +43,12 @@ public class Signpost : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Teleport()
+    {
+        // Teleport
+        GameManager.instance.player.transform.position = destinationPosition;
     }
 
     void OnTriggerEnter(Collider _other)
