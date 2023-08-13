@@ -4,28 +4,55 @@ using UnityEngine;
 
 public class Signpost : MonoBehaviour
 {
-    [SerializeField] private Transform destination;
+    public Transform destination;
     public string destinationName;
+    public TeleportationUI teleportationUI;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool isNearby;
+
+    void Awake()
     {
-        
+        isNearby = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isNearby)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (teleportationUI.IsActive)
+                {
+                    Vector3 destinationPosition = teleportationUI.GetSelectedDestination();
+
+                    // Hide UI
+                    teleportationUI.SetActive(null, false);
+
+                    if (destinationPosition != Vector3.zero)
+                    {
+                        // Fade out
+                        // Teleport
+                        GameManager.instance.player.transform.position = destinationPosition;
+                        // Fade in
+                    }
+                }
+                else
+                {
+                    teleportationUI.SetActive(this, true);
+                }
+            }
+        }
     }
 
     void OnTriggerEnter(Collider _other)
     {
         GameManager.instance.AddActiveSignpost(this);
+        isNearby = true;
     }
 
-    public void OnInteract()
+    void OnTriggerExit(Collider other)
     {
-        // Display UI list of teleport destinations
+        isNearby = false;
     }
 }

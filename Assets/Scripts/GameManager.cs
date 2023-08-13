@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private bool endDemo = false;
 
     public List<Signpost> ActiveSignposts { get; private set; }
+    public GameObject player;
 
     private void Awake()
     {
