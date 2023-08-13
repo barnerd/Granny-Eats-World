@@ -22,7 +22,7 @@ public class FadeInOut : MonoBehaviour
         }
 
         // callback
-        if (_callback != null) _callback();
+        _callback?.Invoke();
 
         // delay time before fading back in
         yield return new WaitForSeconds(blackoutPauseLength);
