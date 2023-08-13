@@ -31,9 +31,13 @@ public class GameManager : MonoBehaviour
 
     private bool endDemo = false;
 
+    public List<Signpost> ActiveSignposts { get; private set; }
+
     private void Awake()
     {
         instance = this;
+
+        ActiveSignposts = new List<Signpost>();
     }
 
     private void Update()
@@ -107,5 +111,10 @@ public class GameManager : MonoBehaviour
         endScreen.SetActive(true);
         endDemo = true;
         Time.timeScale = 0f;
+    }
+
+    public void AddActiveSignpost(Signpost _signpost)
+    {
+        if (!ActiveSignposts.Contains(_signpost)) ActiveSignposts.Add(_signpost);
     }
 }
