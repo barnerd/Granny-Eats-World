@@ -6,5 +6,5 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public string itemName;
-    public GameObject itemGFX;
+    public GameObject itemGFX; // GameObject for 3D Prefab, Sprite/Image for 2D UI
 }
