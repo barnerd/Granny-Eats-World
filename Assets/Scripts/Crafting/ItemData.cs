@@ -6,5 +6,10 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public string itemName;
-    public GameObject itemGFX; // GameObject for 3D Prefab, Sprite/Image for 2D UI
+    public bool unlimited;
+
+    // GameObject for 3D Prefab, Sprite/Image for 2D UI
+    [Header("GFX")]
+    public Sprite itemSprite;
+    //public GameObject itemGFX;
 }
