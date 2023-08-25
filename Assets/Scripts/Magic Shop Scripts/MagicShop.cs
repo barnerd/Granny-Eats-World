@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MagicShop : MonoBehaviour
 {
     public GameObject cauldronPanel;
+    public PauseMenu pauseMenu;
     public Button startButton;
     public GameObject item1Panel;
     public GameObject item2Panel;
@@ -89,9 +90,11 @@ public class MagicShop : MonoBehaviour
     }
     
     void Update() {
-        if (cauldron == true) {
+        if (cauldron) {
+            pauseMenu.CantPause();
             if (Input.GetKeyDown(KeyCode.Tab)) {
                 cauldron = false;
+                pauseMenu.CanPause();
             }
         
             if (itemNum > 2) {
