@@ -800,6 +800,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 25427526}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2591,6 +2595,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1691432171}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -3382,6 +3390,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 25427526}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 3
@@ -5044,6 +5056,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1691432171}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -5231,6 +5247,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1691432171}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 1
@@ -6228,6 +6248,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 25427526}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -6370,7 +6394,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1894839724}
   m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
 --- !u!4 &779325231 stripped
 Transform:
@@ -6659,6 +6686,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 25427526}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 3
@@ -9104,6 +9135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118272708}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -9998,6 +10033,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1691432171}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -10096,7 +10135,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1588777843}
   m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
 --- !u!4 &1297557538 stripped
 Transform:
@@ -11759,6 +11801,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
   m_PrefabInstance: {fileID: 1297557537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1588777843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588777839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1870128034
+      Data2: 1124753974
+      Data3: -363572317
+      Data4: 1646132636
+    Path: event:/SFX_NPC/Hansel - Talk
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1625559786
 GameObject:
   m_ObjectHideFlags: 0
@@ -11867,6 +11940,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.03519547
       objectReference: {fileID: 0}
+    - target: {fileID: 880292023814025696, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5992440063495275401, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11936,6 +12013,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118272708}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -11974,7 +12055,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729657542}
   m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
 --- !u!4 &1637143421 stripped
 Transform:
@@ -12904,6 +12988,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
   m_PrefabInstance: {fileID: 1637143420}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729657542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729657538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1153973872
+      Data2: 1304152873
+      Data3: -403580538
+      Data4: -736081532
+    Path: event:/SFX_NPC/Frog Prince - Talk
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1736553558
 GameObject:
   m_ObjectHideFlags: 0
@@ -13656,6 +13771,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 25427526}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -14387,6 +14506,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
   m_PrefabInstance: {fileID: 779325230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894839724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894839720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -429642925
+      Data2: 1100289064
+      Data3: 1338987657
+      Data4: 638198348
+    Path: event:/SFX_NPC/Gretel - Talk
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1923351025
 GameObject:
   m_ObjectHideFlags: 0
@@ -16117,6 +16267,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2435548714983418575}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 11
       objectReference: {fileID: 0}
@@ -16506,6 +16660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2435548714983418575}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -16726,6 +16884,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2435548714983418575}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -16753,10 +16915,21 @@ PrefabInstance:
       propertyPath: sentences.Array.data[2].dialogueCharacter
       value: 
       objectReference: {fileID: 11400000, guid: bfdc04a848fdbdd408e0b4045d0d8281, type: 2}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7013842254290087777}
   m_SourcePrefab: {fileID: 100100000, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
 --- !u!4 &7013842254290087772 stripped
 Transform:
@@ -16768,6 +16941,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6011988201399623206, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
   m_PrefabInstance: {fileID: 7013842254290087771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7013842254290087777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013842254290087773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -517963484
+      Data2: 1330224188
+      Data3: 991126194
+      Data4: -41160878
+    Path: event:/SFX_NPC/Puss - Talk
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &7094197725254408265
 Transform:
   m_ObjectHideFlags: 0
@@ -16928,6 +17132,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 2435548714983418575}
+    - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: cc0b3ff4467379548b7df5f7e83dd6a2, type: 3}
       propertyPath: sentences.Array.size
       value: 3
