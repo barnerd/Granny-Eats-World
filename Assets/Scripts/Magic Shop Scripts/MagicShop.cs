@@ -98,26 +98,26 @@ public class MagicShop : MonoBehaviour
                 itemNum = 2;
             }
             
-            if (hasItem1 == false && hasItem2 == true) {
+            if (!hasItem1 && hasItem2) {
                 itemNum = 1;
             }
             
-            if (hasRock1 == true && hasWheat2 == true) {
+            if (hasRock1 && hasWheat2) {
                 p = 1;
                 isReady = true;
                 startButton.interactable = true;
             }
-            else if (hasWheat1 == true && hasRock2 == true) {
+            else if (hasWheat1 && hasRock2) {
                 p = 1;
                 isReady = true;
                 startButton.interactable = true;
             }
-            else if (hasLead1 == true && hasSulfur2 == true) {
+            else if (hasLead1 && hasSulfur2) {
                 p = 2;
                 isReady = true;
                 startButton.interactable = true;
             }
-            else if (hasSulfur1 == true && hasLead2 == true) {
+            else if (hasSulfur1 && hasLead2) {
                 p = 2;
                 isReady = true;
                 startButton.interactable = true;
@@ -277,127 +277,127 @@ public class MagicShop : MonoBehaviour
     }
     
     public void SelectBreadCrumbs() {
-        if (itemNum == 1 && hasBreadC1 == false && hasBreadC2 == false) {
+        if (itemNum == 1 && !hasBreadC1 && !hasBreadC2) {
             PlaceItem1(0);
         }
-        else if (itemNum == 2 && hasBreadC1 == false && hasBreadC2 == false) {
+        else if (itemNum == 2 && !hasBreadC1 && !hasBreadC2) {
             PlaceItem2(0);
         }
     }
     
     public void SelectCurds() {
-        if (itemNum == 1 && hasCurds1 == false && hasCurds2 == false) {
+        if (itemNum == 1 && !hasCurds1 && !hasCurds2) {
             PlaceItem1(1);
         }
-        else if (itemNum == 2 && hasCurds1 == false && hasCurds2 == false) {
+        else if (itemNum == 2 && !hasCurds1 && !hasCurds2) {
             PlaceItem2(1);
         }
     }
     
     public void SelectHair() {
-        if (itemNum == 1 && hasHair1 == false && hasHair2 == false) {
+        if (itemNum == 1 && !hasHair1 && !hasHair2) {
             PlaceItem1(2);
         }
-        else if (itemNum == 2 && hasHair1 == false && hasHair2 == false) {
+        else if (itemNum == 2 && !hasHair1 && !hasHair2) {
             PlaceItem2(2);
         }
     }
     
     public void SelectBeans() {
-        if (itemNum == 1 && hasBeans1 == false && hasBeans2 == false) {
+        if (itemNum == 1 && !hasBeans1 && !hasBeans2) {
             PlaceItem1(3);
         }
-        else if (itemNum == 2 && hasBeans1 == false && hasBeans2 == false) {
+        else if (itemNum == 2 && !hasBeans1 && !hasBeans2) {
             PlaceItem2(3);
         }
     }
     
     public void SelectBread() {
-        if (itemNum == 1 && hasBread1 == false && hasBread2 == false) {
+        if (itemNum == 1 && !hasBread1 && !hasBread2) {
             PlaceItem1(4);
         }
-        else if (itemNum == 2 && hasBread1 == false && hasBread2 == false) {
+        else if (itemNum == 2 && !hasBread1 && !hasBread2) {
             PlaceItem2(4);
         }
     }
     
     public void SelectFlour() {
-        if (itemNum == 1 && hasFlour1 == false && hasFlour2 == false) {
+        if (itemNum == 1 && !hasFlour1 && !hasFlour2) {
             PlaceItem1(5);
         }
-        else if (itemNum == 2 && hasFlour1 == false && hasFlour2 == false) {
+        else if (itemNum == 2 && !hasFlour1 && !hasFlour2) {
             PlaceItem2(5);
         }
     }
     
     public void SelectRock() {
-        if (itemNum == 1 && hasRock1 == false && hasRock2 == false) {
+        if (itemNum == 1 && !hasRock1 && !hasRock2) {
             PlaceItem1(6);
         }
-        else if (itemNum == 2 && hasRock1 == false && hasRock2 == false) {
+        else if (itemNum == 2 && !hasRock1 && !hasRock2) {
             PlaceItem2(6);
         }
     }
     
     public void SelectWheat() {
-        if (itemNum == 1 && hasWheat1 == false && hasWheat2 == false) {
+        if (itemNum == 1 && !hasWheat1 && !hasWheat2) {
             PlaceItem1(7);
         }
-        else if (itemNum == 2 && hasWheat1 == false && hasWheat2 == false) {
+        else if (itemNum == 2 && !hasWheat1 && !hasWheat2) {
             PlaceItem2(7);
         }
     }
     
     public void SelectEgg() {
-        if (itemNum == 1 && hasEgg1 == false && hasEgg2 == false) {
+        if (itemNum == 1 && !hasEgg1 && !hasEgg2) {
             PlaceItem1(8);
         }
-        else if (itemNum == 2 && hasEgg1 == false && hasEgg2 == false) {
+        else if (itemNum == 2 && !hasEgg1 && !hasEgg2) {
             PlaceItem2(8);
         }
     }
     
     public void SelectFeather() {
-        if (itemNum == 1 && hasFeather1 == false && hasFeather2 == false) {
+        if (itemNum == 1 && !hasFeather1 && !hasFeather2) {
             PlaceItem1(9);
         }
-        else if (itemNum == 2 && hasFeather1 == false && hasFeather2 == false) {
+        else if (itemNum == 2 && !hasFeather1 && !hasFeather2) {
             PlaceItem2(9);
         }
     }
     
     public void SelectStick() {
-        if (itemNum == 1 && hasStick1 == false && hasStick2 == false) {
+        if (itemNum == 1 && !hasStick1 && !hasStick2) {
             PlaceItem1(10);
         }
-        else if (itemNum == 2 && hasStick1 == false && hasStick2 == false) {
+        else if (itemNum == 2 && !hasStick1 && !hasStick2) {
             PlaceItem2(10);
         }
     }
     
     public void SelectLead() {
-        if (itemNum == 1 && hasLead1 == false && hasLead2 == false) {
+        if (itemNum == 1 && !hasLead1 && !hasLead2) {
             PlaceItem1(11);
         }
-        else if (itemNum == 2 && hasLead1 == false && hasLead2 == false) {
+        else if (itemNum == 2 && !hasLead1 && !hasLead2) {
             PlaceItem2(11);
         }
     }
     
     public void SelectFGold() {
-        if (itemNum == 1 && hasFGold1 == false && hasFGold2 == false) {
+        if (itemNum == 1 && !hasFGold1 && !hasFGold2) {
             PlaceItem1(12);
         }
-        else if (itemNum == 2 && hasFGold1 == false && hasFGold2 == false) {
+        else if (itemNum == 2 && !hasFGold1 && !hasFGold2) {
             PlaceItem2(12);
         }
     }
     
     public void SelectSulfur() {
-        if (itemNum == 1 && hasSulfur1 == false && hasSulfur2 == false) {
+        if (itemNum == 1 && !hasSulfur1 && !hasSulfur2) {
             PlaceItem1(13);
         }
-        else if (itemNum == 2 && hasSulfur1 == false && hasSulfur2 == false) {
+        else if (itemNum == 2 && !hasSulfur1 && !hasSulfur2) {
             PlaceItem2(13);
         }
     }
@@ -469,7 +469,7 @@ public class MagicShop : MonoBehaviour
     }
     
     public void StartCauldron() {
-        if (isReady == true) {
+        if (isReady) {
            // potion.SetPotion(p);
            // SceneManager.LoadScene("PotionMakerMiniGame");
            Debug.Log("START MINIGAME");
