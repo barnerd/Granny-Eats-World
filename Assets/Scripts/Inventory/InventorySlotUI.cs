@@ -66,6 +66,8 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
                 {
                     inventoryUI.inventory.AddItem(_item);
                 }
+
+                // TODO: Play recipe's sound
             }
         }
 
