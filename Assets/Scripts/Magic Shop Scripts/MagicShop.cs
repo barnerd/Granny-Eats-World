@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class MagicShop : MonoBehaviour
 {
+    public GameObject magicShop;
     public GameObject cauldronPanel;
     public PauseMenu pauseMenu;
     public Button startButton;
     public GameObject item1Panel;
     public GameObject item2Panel;
+    
+    public Button cauldronButton;
+    public Button witchButton;
+    public Button crystalballButton;
+    public Button eyeballsButton;
+    public Button skullButton;
+    public Button candleButton;
+    public Button lizardButton;
+    public Button potionButton;
     
     public GameObject breadC1;
     public GameObject curds1;
@@ -86,6 +96,8 @@ public class MagicShop : MonoBehaviour
    // public AudioClip ballSound;
     
     void Start() {
+        //TESTING ONLY -- DELETE LATER-------------------------------
+        magicShop.SetActive(true);
         cauldronPanel.SetActive(false);
     }
     
@@ -95,6 +107,7 @@ public class MagicShop : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Tab)) {
                 cauldron = false;
                 pauseMenu.CanPause();
+                EnableButtons();
             }
         
             if (itemNum > 2) {
@@ -151,6 +164,7 @@ public class MagicShop : MonoBehaviour
         //play minigame button is only clickable until both items are selected and able to make a potion
         cauldronPanel.SetActive(true);
         cauldron = true;
+        DisableButtons();
     }
     
     private void PlaceItem1(int place) {
@@ -469,6 +483,28 @@ public class MagicShop : MonoBehaviour
         hasFGold2 = false;
         hasSulfur2 = false;
         itemNum = 2;
+    }
+    
+    public void DisableButtons() {
+        cauldronButton.interactable = false;
+        witchButton.interactable = false;
+        crystalballButton.interactable = false;
+        eyeballsButton.interactable = false;
+        skullButton.interactable = false;
+        candleButton.interactable = false;
+        lizardButton.interactable = false;
+        potionButton.interactable = false;
+    }
+    
+    public void EnableButtons() {
+        cauldronButton.interactable = true;
+        witchButton.interactable = true;
+        crystalballButton.interactable = true;
+        eyeballsButton.interactable = true;
+        skullButton.interactable = true;
+        candleButton.interactable = true;
+        lizardButton.interactable = true;
+        potionButton.interactable = true;
     }
     
     public void StartCauldron() {
