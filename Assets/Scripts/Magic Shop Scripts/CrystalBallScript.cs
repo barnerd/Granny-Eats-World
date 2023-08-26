@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CrystalBallScript : MonoBehaviour
 {
     public GameObject dialogBox;
+    public MagicShop buttons;
     public Text message;
     private bool showing = false;
     
@@ -18,14 +19,21 @@ public class CrystalBallScript : MonoBehaviour
     
     void Update() {
         if (Input.GetKeyDown(KeyCode.E) && showing == true) {
-            SceneManager.LoadScene("MagicShop");
+            HideDialog();
         }
+    }
+
+    public void HideDialog() {
+        dialogBox.SetActive(false);
+        showing = false;
+        buttons.EnableButtons();
     }
 
     public void ShowDialog() {
         dialogBox.SetActive(true);
         int randNum = Random.Range(0, 2);
         showing = true;
+        buttons.DisableButtons();
         
         if (randNum == 0) {
             message.text = "The princess is in another castle";
