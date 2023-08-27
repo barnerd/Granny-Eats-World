@@ -88,17 +88,17 @@ public class MagicShop : MonoBehaviour
     private bool hasItem2 = false;
     private bool cauldron = false;
     
-  //  public PotionMinigame potion;
+    public PotionMinigame potion;
     private int p;
     
     //AUDIO
+    public AudioManager worldAudio;
   //  public ShopAudio sfx;
    // public AudioClip ballSound;
     
     void Start() {
         //TESTING ONLY -- DELETE LATER-------------------------------
-        magicShop.SetActive(true);
-        cauldronPanel.SetActive(false);
+        EnterShop();
     }
     
     void Update() {
@@ -156,6 +156,14 @@ public class MagicShop : MonoBehaviour
         else {
             cauldronPanel.SetActive(false);
         }
+    }
+    
+    public void EnterShop() {
+        magicShop.SetActive(true);
+        cauldronPanel.SetActive(false);
+        EnableButtons();
+        DeselectItem1();
+        DeselectItem2();
     }
 
     public void PickItems() {
@@ -508,14 +516,11 @@ public class MagicShop : MonoBehaviour
     }
     
     public void StartCauldron() {
-        if (isReady) {
-           // potion.SetPotion(p);
-           // SceneManager.LoadScene("PotionMakerMiniGame");
-           Debug.Log("START MINIGAME");
-        }
-        else {
-            //DISPLAY error message
-        }
+        potion.EnterMinigame(p);
+        magicShop.SetActive(false);
+        worldAudio.PauseMusic();
+        DeselectItem1();
+        DeselectItem2();
     }
 
 }
