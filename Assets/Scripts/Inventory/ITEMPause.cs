@@ -6,7 +6,7 @@ public class ITEMPause : MonoBehaviour
 
     [Space(10)]
     [SerializeField] private GameObject pressE;
-    [SerializeField] private ITEMInventory inventory;
+    [SerializeField] private Inventory inventory;
     private bool isColliding;
 
     void Update()
@@ -30,7 +30,7 @@ public class ITEMPause : MonoBehaviour
         if (invPosition != null && itemVal >= 0 && itemVal < 10)
         {
             invPosition[itemVal].SetActive(true);
-            inventory.AddItem(itemVal);
+            //inventory.AddItem(itemVal);
         }
     }
 
@@ -43,7 +43,7 @@ public class ITEMPause : MonoBehaviour
         if (invPosition != null)
         {
             invPosition[itemVal].SetActive(false);
-            inventory.RemoveItem(itemVal);
+            //inventory.RemoveItem(itemVal);
         }
     }
 

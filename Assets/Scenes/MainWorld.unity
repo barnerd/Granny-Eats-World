@@ -22138,9 +22138,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1351145052
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7377069457163481946, guid: d3ff754b32220477eb7500b5385691fa, type: 3}
+  m_PrefabInstance: {fileID: 598222588}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351145047}
   m_Enabled: 1
@@ -32619,9 +32618,8 @@ GameObject:
   m_IsActive: 1
 --- !u!224 &2102121968
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 779802576462917370, guid: d3ff754b32220477eb7500b5385691fa, type: 3}
+  m_PrefabInstance: {fileID: 1962402138}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102121967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -32639,9 +32637,8 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102121969
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7377069457163481946, guid: d3ff754b32220477eb7500b5385691fa, type: 3}
+  m_PrefabInstance: {fileID: 1962402138}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102121967}
   m_Enabled: 1
