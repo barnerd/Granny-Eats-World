@@ -47,7 +47,7 @@ public class PotionMinigame : MonoBehaviour
     public GameObject bubbles23a;
     
     //AUDIO
-    public MinigameAudio sfx;
+    public AudioManager sfx;
     public AudioClip cauldron;
     public AudioClip correctLetter;
     public AudioClip wrongLetter;
