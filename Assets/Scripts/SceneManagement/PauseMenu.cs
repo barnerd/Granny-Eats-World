@@ -3,6 +3,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PausePanel;
+    public InventoryUI invUI;
 
     public static bool GameIsPaused = false;
 
@@ -24,8 +25,9 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        invUI.UpdateUI();
         PausePanel.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         GameIsPaused = true;
     }
 

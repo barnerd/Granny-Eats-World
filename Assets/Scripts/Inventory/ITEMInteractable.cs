@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// To make 3D items interactable
+/// </summary>
 public class ITEMInteractable : MonoBehaviour
 {
     [SerializeField] public GameObject item;
