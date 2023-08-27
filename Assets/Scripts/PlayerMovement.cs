@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    bool canMove = true;
+
     //Animations
     public Animator anim;
     public SpriteRenderer theSR;
@@ -44,31 +46,46 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-
-        MyInput();
-        SpeedControl();
-
-        // handle drag
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
-
-        // animation
-        anim.SetBool("onGround", grounded);
-
-        anim.SetFloat("moveSpeed", rb.velocity.magnitude);
-
-        if (!theSR.flipX && horizontalInput < 0)
+        if (canMove)
         {
-            theSR.flipX = true;
+            // ground check
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+
+            MyInput();
+            SpeedControl();
+
+            // handle drag
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+
+            // animation
+            anim.SetBool("onGround", grounded);
+
+            anim.SetFloat("moveSpeed", rb.velocity.magnitude);
+
+            if (!theSR.flipX && horizontalInput < 0)
+            {
+                theSR.flipX = true;
+            }
+            else if (theSR.flipX && horizontalInput > 0)
+            {
+                theSR.flipX = false;
+            }
         }
-        else if (theSR.flipX && horizontalInput > 0)
-        {
-            theSR.flipX = false;
-        }
+    }
+
+    public void CannotMove()
+    {
+        canMove = false;
+        readyToJump = false;
+    }
+
+    public void CanMove()
+    {
+        canMove = true;
+        readyToJump = true;
     }
 
     private void FixedUpdate()

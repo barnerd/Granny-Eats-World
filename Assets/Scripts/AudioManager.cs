@@ -35,6 +35,25 @@ public class AudioManager : MonoBehaviour
         MusicSource.Play();
     }
 
+    public void PauseMusic()
+    {
+        BGSource.Pause();
+        CricketsSource.Pause();
+        UFOSource.Pause();
+        MusicSource.Pause();
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        MusicSource.PlayOneShot(clip);
+        BGSource.Play();
+    }
+
+    public void PauseBubbling()
+    {
+        BGSource.Stop();
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
