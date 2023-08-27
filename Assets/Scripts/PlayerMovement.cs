@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    
+
     bool canMove = true;
 
     //Animations
@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (canMove) {
+        if (canMove)
+        {
             // ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
@@ -74,13 +75,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    
-    public void CannotMove() {
+
+    public void CannotMove()
+    {
         canMove = false;
         readyToJump = false;
     }
-    
-    public void CanMove() {
+
+    public void CanMove()
+    {
         canMove = true;
         readyToJump = true;
     }
