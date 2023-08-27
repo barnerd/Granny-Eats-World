@@ -22,6 +22,7 @@ public class PotionMinigame : MonoBehaviour
     public GameObject pressStart;
     public GameObject winScreen;
     public GameObject loseScreen;
+    public GameObject spaceCont;
     private int randNum1;
     private int randNum2;
     private int randNum3;
@@ -188,8 +189,12 @@ public class PotionMinigame : MonoBehaviour
                         ClickButton(letterPos, 100);
                     }
                 }
-                if (letterPos > 3) {
-                    ResetLetters();
+                if (letterPos >= 3) {
+                    spaceCont.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.Space)) {
+                        spaceCont.SetActive(false);
+                        ResetLetters();
+                    }
                 }
             }
             
