@@ -88,6 +88,7 @@ public class MagicShop : MonoBehaviour
     private bool hasItem2 = false;
     private bool cauldron = false;
     
+    public PlayerMovement player;
     public PotionMinigame potion;
     private int p;
     
@@ -155,6 +156,10 @@ public class MagicShop : MonoBehaviour
         }
         else {
             cauldronPanel.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Tab)) {
+                //LEAVE SHOP
+                ExitShop();
+            }
         }
     }
     
@@ -164,6 +169,12 @@ public class MagicShop : MonoBehaviour
         EnableButtons();
         DeselectItem1();
         DeselectItem2();
+        player.CannotMove();
+    }
+    
+    public void ExitShop() {
+        magicShop.SetActive(false);
+        player.CanMove();
     }
 
     public void PickItems() {

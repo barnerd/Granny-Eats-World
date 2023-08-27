@@ -18,7 +18,6 @@ public class PotionMinigame : MonoBehaviour
     public Animator animA;
     public Animator animB;
     public Animator animC;
-    //public Animator cauldron;
     public GameObject pressStart;
     public GameObject winScreen;
     public GameObject loseScreen;
@@ -26,7 +25,7 @@ public class PotionMinigame : MonoBehaviour
     private int randNum1;
     private int randNum2;
     private int randNum3;
-    private int correctAns = 0;
+    private int correctAns = -1;
     private bool hasStarted = false;
     private int potionNum;
     private bool enterMinigame = false;
@@ -65,31 +64,10 @@ public class PotionMinigame : MonoBehaviour
     public GameObject mainCamera;
     public GameObject minigameCamera;
     
-   /* void Start() {
-        mainCamera.SetActive(true);
-        minigameCamera.SetActive(false);
-        pressStart.SetActive(false);
-        timerObject.SetActive(false);
-        aa.SetActive(false);
-        bb.SetActive(false);
-        cc.SetActive(false);
-        bubbles1.SetActive(false);
-        bubbles5.SetActive(false);
-        bubbles7.SetActive(false);
-        bubbles10.SetActive(false);
-        bubbles14.SetActive(false);
-        bubbles17.SetActive(false);
-        bubbles23.SetActive(false);
-        bubbles23a.SetActive(false);
-        winScreen.SetActive(false);
-        loseScreen.SetActive(false);
-        timeRemaining = 22;
-    } */
-    
     void Update() {
         if (enterMinigame) {
             if (hasStarted == false) {
-                if (Input.GetKeyUp(KeyCode.Space)) {
+                if (Input.GetKeyUp(KeyCode.Space) && correctAns == -1) {
                     pressStart.SetActive(false);
                     timerObject.SetActive(true);
                     sfx.PlayMusic(music);
@@ -99,6 +77,7 @@ public class PotionMinigame : MonoBehaviour
                     cc.SetActive(true);
                     ResetLetters();
                     hasStarted = true;
+                    correctAns = 0;
                 }
             }
         
@@ -245,7 +224,7 @@ public class PotionMinigame : MonoBehaviour
         loseScreen.SetActive(false);
         timeRemaining = 22;
         enterMinigame = true;
-        correctAns = 0;
+        correctAns = -1;
     }
     
     public void BackToShop() {
