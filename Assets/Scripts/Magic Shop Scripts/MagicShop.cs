@@ -99,7 +99,7 @@ public class MagicShop : MonoBehaviour
     
     void Start() {
         //TESTING ONLY -- DELETE LATER-------------------------------
-        EnterShop();
+        //EnterShop();
     }
     
     void Update() {
