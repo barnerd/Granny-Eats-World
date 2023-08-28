@@ -41,6 +41,12 @@ public class CrystalBallScript : MonoBehaviour
         else if (randNum == 1) {
             message.text = "The cake is a lie";
         }
+        else if (randNum == 2) {
+            message.text = "Concentrate and ask again";
+        }
+        else if (randNum == 3) {
+            message.text = "Samus is a girl!?!";
+        }
     }
     
 }
