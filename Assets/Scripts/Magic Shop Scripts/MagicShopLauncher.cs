@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagicShopLauncher : MonoBehaviour
 {
     [SerializeField] MagicShop shop;
+    [SerializeField] GameObject pressE;
     bool isNearby;
     bool enteredShop = false;
 
@@ -23,6 +24,7 @@ public class MagicShopLauncher : MonoBehaviour
             {
                 shop.EnterShop();
                 enteredShop = true;
+                pressE.SetActive(false);
             }
         }
     }
@@ -35,11 +37,13 @@ public class MagicShopLauncher : MonoBehaviour
     {
         Debug.Log("Enter Magic Shop collider");
         isNearby = true;
+        pressE.SetActive(true);
     }
 
     void OnTriggerExit(Collider other)
     {
         Debug.Log("Exit Magic Shop collider");
         isNearby = false;
+        pressE.SetActive(false);
     }
 }
