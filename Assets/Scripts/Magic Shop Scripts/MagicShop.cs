@@ -9,6 +9,7 @@ public class MagicShop : MonoBehaviour
     public GameObject magicShop;
     public GameObject cauldronPanel;
     public PauseMenu pauseMenu;
+    public MagicShopLauncher shopLauncher;
     public Button startButton;
     public GameObject item1Panel;
     public GameObject item2Panel;
@@ -175,6 +176,7 @@ public class MagicShop : MonoBehaviour
     public void ExitShop() {
         magicShop.SetActive(false);
         player.CanMove();
+        shopLauncher.LeaveShop();
     }
 
     public void PickItems() {
