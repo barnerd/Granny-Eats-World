@@ -6,6 +6,7 @@ public class MagicShopLauncher : MonoBehaviour
 {
     [SerializeField] MagicShop shop;
     bool isNearby;
+    bool enteredShop = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,16 @@ public class MagicShopLauncher : MonoBehaviour
     {
         if (isNearby)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !enteredShop)
             {
                 shop.EnterShop();
+                enteredShop = true;
             }
         }
+    }
+    
+    public void LeaveShop() {
+        enteredShop = false;
     }
 
     void OnTriggerEnter(Collider _other)
