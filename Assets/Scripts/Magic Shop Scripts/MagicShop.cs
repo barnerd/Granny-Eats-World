@@ -8,7 +8,7 @@ public class MagicShop : MonoBehaviour
 {
     public GameObject magicShop;
     public GameObject cauldronPanel;
-    public PauseMenu pauseMenu;
+    public NewPauseMenu pauseMenu;
     public MagicShopLauncher shopLauncher;
     public Button startButton;
     public GameObject item1Panel;
@@ -37,6 +37,7 @@ public class MagicShop : MonoBehaviour
     public GameObject lead1;
     public GameObject fGold1;
     public GameObject sulfur1;
+    public GameObject water1;
     
     private bool hasBreadC1 = false;
     private bool hasCurds1 = false;
@@ -52,6 +53,7 @@ public class MagicShop : MonoBehaviour
     private bool hasLead1 = false;
     private bool hasFGold1 = false;
     private bool hasSulfur1 = false;
+    private bool hasWater1 = false;
     
     public GameObject breadC2;
     public GameObject curds2;
@@ -67,6 +69,7 @@ public class MagicShop : MonoBehaviour
     public GameObject lead2;
     public GameObject fGold2;
     public GameObject sulfur2;
+    public GameObject water2;
     
     private bool hasBreadC2 = false;
     private bool hasCurds2 = false;
@@ -82,6 +85,7 @@ public class MagicShop : MonoBehaviour
     private bool hasLead2 = false;
     private bool hasFGold2 = false;
     private bool hasSulfur2 = false;
+    private bool hasWater2 = false;
     
     private int itemNum = 1;
     private bool isReady = false;
@@ -105,10 +109,8 @@ public class MagicShop : MonoBehaviour
     
     void Update() {
         if (cauldron) {
-            pauseMenu.CantPause();
             if (Input.GetKeyDown(KeyCode.Tab)) {
                 cauldron = false;
-                pauseMenu.CanPause();
                 EnableButtons();
             }
         
@@ -140,11 +142,7 @@ public class MagicShop : MonoBehaviour
                 isReady = true;
                 startButton.interactable = true;
             }
-            else {
-                isReady = false;
-                startButton.interactable = false;
-            }
-        /* else if (hasWater1 == true && hasFlour2 == true) {
+           else if (hasWater1 == true && hasFlour2 == true) {
                 p = 3;
                 isReady = true;
                 startButton.interactable = true;
@@ -153,7 +151,11 @@ public class MagicShop : MonoBehaviour
                 p = 3;
                 isReady = true;
                 startButton.interactable = true;
-            } */
+            }
+            else {
+                isReady = false;
+                startButton.interactable = false;
+            }
         }
         else {
             cauldronPanel.SetActive(false);
@@ -171,12 +173,16 @@ public class MagicShop : MonoBehaviour
         DeselectItem1();
         DeselectItem2();
         player.CannotMove();
+        pauseMenu.CantPause();
+        //pause world music
     }
     
     public void ExitShop() {
         magicShop.SetActive(false);
         player.CanMove();
         shopLauncher.LeaveShop();
+        pauseMenu.CanPause();
+        //play world music
     }
 
     public void PickItems() {
@@ -246,6 +252,10 @@ public class MagicShop : MonoBehaviour
         if (place == 13) {   sulfur1.SetActive(true);
                              hasSulfur1 = true; }
         else {  sulfur1.SetActive(false); }
+        
+        if (place == 14) {   water1.SetActive(true);
+                             hasWater1 = true; }
+        else {  water1.SetActive(false); }
 
         ++itemNum;
         hasItem1 = true;
@@ -309,6 +319,10 @@ public class MagicShop : MonoBehaviour
         if (place == 13) {   sulfur2.SetActive(true);
                             hasSulfur2 = true; }
         else {  sulfur2.SetActive(false); }
+        
+        if (place == 14) {   water2.SetActive(true);
+                             hasWater2 = true; }
+        else {  water2.SetActive(false); }
 
         ++itemNum;
         hasItem2 = true;
@@ -440,6 +454,15 @@ public class MagicShop : MonoBehaviour
         }
     }
     
+    public void SelectWater() {
+        if (itemNum == 1 && !hasWater1 && !hasWater2) {
+            PlaceItem1(14);
+        }
+        else if (itemNum == 2 && !hasWater1 && !hasWater2) {
+            PlaceItem2(14);
+        }
+    }
+    
     public void DeselectItem1() {
         breadC1.SetActive(false);
         curds1.SetActive(false);
@@ -455,6 +478,7 @@ public class MagicShop : MonoBehaviour
         lead1.SetActive(false);
         fGold1.SetActive(false);
         sulfur1.SetActive(false);
+        water1.SetActive(false);
         hasItem1 = false;
         hasBreadC1 = false;
         hasCurds1 = false;
@@ -470,6 +494,7 @@ public class MagicShop : MonoBehaviour
         hasLead1 = false;
         hasFGold1 = false;
         hasSulfur1 = false;
+        hasWater1 = false;
         itemNum = 1;
     }
     
@@ -488,6 +513,7 @@ public class MagicShop : MonoBehaviour
         lead2.SetActive(false);
         fGold2.SetActive(false);
         sulfur2.SetActive(false);
+        water2.SetActive(false);
         hasItem2 = false;
         hasBreadC2 = false;
         hasCurds2 = false;
@@ -503,6 +529,7 @@ public class MagicShop : MonoBehaviour
         hasLead2 = false;
         hasFGold2 = false;
         hasSulfur2 = false;
+        hasWater2 = false;
         itemNum = 2;
     }
     

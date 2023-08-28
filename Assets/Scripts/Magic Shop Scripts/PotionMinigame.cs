@@ -9,6 +9,7 @@ public class PotionMinigame : MonoBehaviour
 {
     private int letterPos = 0;
     public MagicShop magicShop;
+    public NewPauseMenu pauseMenu;
     public SpriteRenderer a;
     public SpriteRenderer b;
     public SpriteRenderer c;
@@ -89,16 +90,19 @@ public class PotionMinigame : MonoBehaviour
                         flour.SetActive(true);
                         foolsGold.SetActive(false);
                         bread.SetActive(false);
+                        pauseMenu.NewItem(1);
                     }
                     else if (potionNum == 2) {
                         flour.SetActive(false);
                         foolsGold.SetActive(true);
                         bread.SetActive(false);
+                        pauseMenu.NewItem(3);
                     }
                     else if (potionNum == 3) {
                         flour.SetActive(false);
                         foolsGold.SetActive(false);
                         bread.SetActive(true);
+                        pauseMenu.NewItem(2);
                     }
                     
                     Debug.Log("YOU WIN!");
