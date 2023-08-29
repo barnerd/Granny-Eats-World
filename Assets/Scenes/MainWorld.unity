@@ -19149,8 +19149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 293778588}
   buttons: {fileID: 1509968624}
-  witch: {fileID: 1156719299}
+  speakerImage: {fileID: 0}
   message: {fileID: 804211023}
+  speakers: []
+  messages: []
 --- !u!114 &1156719299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30314,8 +30316,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1933320701}
   buttons: {fileID: 1509968624}
-  witch: {fileID: 1910588230}
+  speakerImage: {fileID: 524210340}
   message: {fileID: 71171006}
+  speakers:
+  - {fileID: 21300000, guid: 2a9e011f079644a8e8c9386425b26034, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 2a9e011f079644a8e8c9386425b26034, type: 3}
+  - {fileID: 21300000, guid: 2a9e011f079644a8e8c9386425b26034, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  - {fileID: 21300000, guid: 2a9e011f079644a8e8c9386425b26034, type: 3}
+  - {fileID: 21300000, guid: 79d7ebdf8095a5749aba580f3b8960fc, type: 3}
+  messages:
+  - Are you the witch of the woods?
+  - "I guess so? I\u2019m watching the shop while my grandma\u2019s on vacation."
+  - Do you need some magic stuff or whatever?
+  - My grandma is gonna swallow the world!!!
+  - "She swallowed a fly and now she\u2019s gonna swallow the whole planet unless
+    we stop her!!!"
+  - "Oh, that\u2019s an easy fix. A fly-swatter potion."
+  - Granny Yaga wrote the recipe down here.
+  - It says you need _INSERT HINT HERE_
+  - Just go over to the cauldron and mix it up.
+  - Why me?
+  - "I\u2019m on break."
 --- !u!114 &1910588230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30362,7 +30389,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1910588229}
         m_TargetAssemblyTypeName: WitchDialog, Assembly-CSharp
-        m_MethodName: ShowDialog
+        m_MethodName: ShowNextDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
