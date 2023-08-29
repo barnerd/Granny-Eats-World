@@ -727,29 +727,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicShop: {fileID: 1509968624}
   pauseMenu: {fileID: 828664496}
-  a: {fileID: 1751964254}
-  b: {fileID: 1872675993}
-  c: {fileID: 568746106}
-  aa: {fileID: 1751964252}
-  bb: {fileID: 1872675991}
-  cc: {fileID: 568746104}
-  animA: {fileID: 1751964253}
-  animB: {fileID: 1872675992}
-  animC: {fileID: 568746105}
+  letters:
+  - {fileID: 1751964252}
+  - {fileID: 1872675991}
+  - {fileID: 568746104}
   pressStart: {fileID: 1412929246}
   winScreen: {fileID: 1818978208}
   loseScreen: {fileID: 2144352065}
   spaceCont: {fileID: 1254844215}
+  requiredAnswersForWin: 5
   timeText: {fileID: 1028640818}
   timerObject: {fileID: 1028640816}
-  bubbles1: {fileID: 1078341351}
-  bubbles5: {fileID: 460562553}
-  bubbles7: {fileID: 1340754006}
-  bubbles10: {fileID: 801367909}
-  bubbles14: {fileID: 1328716705}
-  bubbles17: {fileID: 19578100}
-  bubbles23: {fileID: 1146393534}
-  bubbles23a: {fileID: 1841004493}
+  bubbles:
+  - {fileID: 1078341351}
+  - {fileID: 460562553}
+  - {fileID: 1340754006}
+  - {fileID: 801367909}
+  - {fileID: 1328716705}
+  - {fileID: 19578100}
+  - {fileID: 1146393534}
+  - {fileID: 1841004493}
   sfx: {fileID: 1883660583}
   cauldron: {fileID: 8300000, guid: 4683e9c177dd582418943cec8d56a4d7, type: 3}
   correctLetter: {fileID: 8300000, guid: b8eac4ba4ab740b4b89161978cce32cc, type: 3}

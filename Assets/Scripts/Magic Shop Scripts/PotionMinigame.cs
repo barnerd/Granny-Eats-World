@@ -10,44 +10,29 @@ public class PotionMinigame : MonoBehaviour
     private int letterPos = 0;
     public MagicShop magicShop;
     public NewPauseMenu pauseMenu;
-    public SpriteRenderer a;
-    public SpriteRenderer b;
-    public SpriteRenderer c;
-    public GameObject aa;
-    public GameObject bb;
-    public GameObject cc;
-    public Animator animA;
-    public Animator animB;
-    public Animator animC;
+    public GameObject[] letters;
     public GameObject pressStart;
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject spaceCont;
-    private int randNum1;
-    private int randNum2;
-    private int randNum3;
-    private int correctAns = -1;
+    private int[] randLetters;
+    private int correctLetters = 0;
+    private int correctAnswers = -1;
+    [SerializeField] private int requiredAnswersForWin;
     private bool hasStarted = false;
     private int potionNum;
     private bool enterMinigame = false;
-    
-    //TIMER
-    private float timeRemaining = 22;
-    private bool timerIsRunning = false;
+
+    [Header("TIMER")]
     public Text timeText;
     public GameObject timerObject;
-    
-    //BUBBLES
-    public GameObject bubbles1;
-    public GameObject bubbles5;
-    public GameObject bubbles7;
-    public GameObject bubbles10;
-    public GameObject bubbles14;
-    public GameObject bubbles17;
-    public GameObject bubbles23;
-    public GameObject bubbles23a;
-    
-    //AUDIO
+    private float timeRemaining = 22;
+    private bool timerIsRunning = false;
+
+    [Header("BUBBLES")]
+    public GameObject[] bubbles;
+
+    [Header("AUDIO")]
     public AudioManager sfx;
     public AudioClip cauldron;
     public AudioClip correctLetter;
@@ -55,56 +40,69 @@ public class PotionMinigame : MonoBehaviour
     public AudioClip fail;
     public AudioClip win;
     public AudioClip music;
-    
-    //POTIONS
+
+    [Header("POTIONS")]
     public GameObject flour;
     public GameObject foolsGold;
     public GameObject bread;
-    
-    //CAMERAS
+
+    [Header("CAMERAS")]
     public GameObject mainCamera;
     public GameObject minigameCamera;
-    
-    void Update() {
-        if (enterMinigame) {
-            if (hasStarted == false) {
-                if (Input.GetKeyUp(KeyCode.Space) && correctAns == -1) {
-                    pressStart.SetActive(false);
-                    timerObject.SetActive(true);
-                    sfx.PlayMusic(music);
-                    timerIsRunning = true;
-                    aa.SetActive(true);
-                    bb.SetActive(true);
-                    cc.SetActive(true);
-                    ResetLetters();
-                    hasStarted = true;
-                    correctAns = 0;
+
+    void Start()
+    {
+        randLetters = new int[3];
+    }
+
+    void Update()
+    {
+        if (enterMinigame)
+        {
+            if (hasStarted == false && Input.GetKeyUp(KeyCode.Space))
+            {
+                pressStart.SetActive(false);
+                timerObject.SetActive(true);
+                sfx.PlayMusic(music);
+                timerIsRunning = true;
+
+                hasStarted = true;
+                correctAnswers = 0;
+                foreach (var key in letters)
+                {
+                    key.SetActive(true);
                 }
+                ResetLetters();
             }
-        
-            if (hasStarted == true) {
-            //WIN GAME
-                if (timerIsRunning == true && correctAns >= 25) {
+
+            if (hasStarted == true)
+            {
+                //WIN GAME
+                if (timerIsRunning == true && correctAnswers >= requiredAnswersForWin)
+                {
                     //WHAT POTION WAS MADE
-                    if (potionNum == 1) {
+                    if (potionNum == 1)
+                    {
                         flour.SetActive(true);
                         foolsGold.SetActive(false);
                         bread.SetActive(false);
                         pauseMenu.NewItem(1);
                     }
-                    else if (potionNum == 2) {
+                    else if (potionNum == 2)
+                    {
                         flour.SetActive(false);
                         foolsGold.SetActive(true);
                         bread.SetActive(false);
                         pauseMenu.NewItem(3);
                     }
-                    else if (potionNum == 3) {
+                    else if (potionNum == 3)
+                    {
                         flour.SetActive(false);
                         foolsGold.SetActive(false);
                         bread.SetActive(true);
                         pauseMenu.NewItem(2);
                     }
-                    
+
                     Debug.Log("YOU WIN!");
                     winScreen.SetActive(true);
                     //PAUSE Music
@@ -112,75 +110,64 @@ public class PotionMinigame : MonoBehaviour
                     sfx.PlaySFX(win);
                     EndGame();
                 }
-                else if (timerIsRunning == false && correctAns < 25) {
+                else if (timerIsRunning == false && correctAnswers < requiredAnswersForWin)
+                {
                     Debug.Log("YOU LOSE!");
                     loseScreen.SetActive(true);
                     sfx.PlaySFX(fail);
                     EndGame();
                 }
-                
-            //BUBBLE CONTROLS
-                if (correctAns > 0) {
-                    bubbles1.SetActive(true);
-                    
-                    if (correctAns > 4) {
-                        bubbles5.SetActive(true);
-                        
-                        if (correctAns > 6) {
-                            bubbles7.SetActive(true);
-                            
-                            if (correctAns > 9) {
-                                bubbles10.SetActive(true);
-                                
-                                if (correctAns > 13) {
-                                    bubbles14.SetActive(true);
-                                    
-                                    if (correctAns > 16) {
-                                        bubbles17.SetActive(true);
-                                        
-                                        if (correctAns > 22) {
-                                            bubbles23.SetActive(true);
-                                            bubbles23a.SetActive(true);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            
-            //INPUT CONTROLS
-                if (Input.anyKeyDown) {
-                    letterPos += 1;
-                
-                    if (Input.GetKeyDown(KeyCode.A)) {
+
+                //INPUT CONTROLS
+                if (Input.anyKeyDown)
+                {
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
                         ClickButton(letterPos, 0);
                     }
-                    else if (Input.GetKeyDown(KeyCode.W)) {
+                    else if (Input.GetKeyDown(KeyCode.W))
+                    {
                         ClickButton(letterPos, 1);
                     }
-                    else if (Input.GetKeyDown(KeyCode.S)) {
+                    else if (Input.GetKeyDown(KeyCode.S))
+                    {
                         ClickButton(letterPos, 2);
                     }
-                    else if (Input.GetKeyDown(KeyCode.D)) {
+                    else if (Input.GetKeyDown(KeyCode.D))
+                    {
                         ClickButton(letterPos, 3);
                     }
-                    else if (Input.GetKeyDown(KeyCode.E)) {
+                    else if (Input.GetKeyDown(KeyCode.E))
+                    {
                         ClickButton(letterPos, 4);
                     }
-                    else {
+                    else
+                    {
                         ClickButton(letterPos, 100);
                     }
+                    letterPos++;
                 }
-                if (letterPos >= 3) {
-                    spaceCont.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.Space)) {
-                        spaceCont.SetActive(false);
-                        ResetLetters();
+                if (letterPos >= 3)
+                {
+                    if (correctLetters == 3)
+                    {
+                        correctAnswers++;
+                        // TODO: Display progress
+                        Debug.Log("win condition: " + correctAnswers + "/" + requiredAnswersForWin);
+                        if (correctAnswers < bubbles.Length)
+                        {
+                            bubbles[correctAnswers].SetActive(true);
+                        }
                     }
+                    //spaceCont.SetActive(true);
+                    //if (Input.GetKeyDown(KeyCode.Space))
+                    //{
+                    //spaceCont.SetActive(false);
+                    ResetLetters();
+                    //}
                 }
             }
-            
+
             if (timerIsRunning)
             {
                 if (timeRemaining > 0)
@@ -197,41 +184,46 @@ public class PotionMinigame : MonoBehaviour
             }
         }
     }
-    
-    private void EndGame() {
+
+    private void EndGame()
+    {
         hasStarted = false;
         timerIsRunning = false;
-        aa.SetActive(false);
-        bb.SetActive(false);
-        cc.SetActive(false);
+
+        foreach (var key in letters)
+        {
+            key.SetActive(false);
+        }
+
         timerObject.SetActive(false);
     }
-    
-    public void RestartGame() {
+
+    public void RestartGame()
+    {
         //RESTART GAME
         mainCamera.SetActive(false);
         minigameCamera.SetActive(true);
         pressStart.SetActive(true);
         timerObject.SetActive(false);
-        aa.SetActive(false);
-        bb.SetActive(false);
-        cc.SetActive(false);
-        bubbles1.SetActive(false);
-        bubbles5.SetActive(false);
-        bubbles7.SetActive(false);
-        bubbles10.SetActive(false);
-        bubbles14.SetActive(false);
-        bubbles17.SetActive(false);
-        bubbles23.SetActive(false);
-        bubbles23a.SetActive(false);
+
+        foreach (var key in letters)
+        {
+            key.SetActive(false);
+        }
+
+        foreach (var bubble in bubbles)
+        {
+            bubble.SetActive(false);
+        }
         winScreen.SetActive(false);
         loseScreen.SetActive(false);
         timeRemaining = 22;
         enterMinigame = true;
-        correctAns = -1;
+        correctAnswers = -1;
     }
-    
-    public void BackToShop() {
+
+    public void BackToShop()
+    {
         //RETURN TO SHOP
         magicShop.EnterShop();
         sfx.PauseBubbling();
@@ -240,92 +232,50 @@ public class PotionMinigame : MonoBehaviour
         minigameCamera.SetActive(false);
         enterMinigame = false;
     }
-    
-    public void EnterMinigame(int p) {
+
+    public void EnterMinigame(int p)
+    {
         potionNum = p;
         RestartGame();
     }
-    
-    private void ResetLetters() {
-        a.color = Color.white;
-        b.color = Color.white;
-        c.color = Color.white;
+
+    private void ResetLetters()
+    {
+        letters[0].GetComponent<SpriteRenderer>().color = Color.white;
+        letters[1].GetComponent<SpriteRenderer>().color = Color.white;
+        letters[2].GetComponent<SpriteRenderer>().color = Color.white;
         letterPos = 0;
-        
-        randNum1 = Random.Range(0, 5);
-        SetUp1(randNum1);
-        
-        randNum2 = Random.Range(0, 5);
-        SetUp2(randNum2);
-        
-        randNum3 = Random.Range(0, 5);
-        SetUp3(randNum3);
-    }
-    
-    private void SetUp1(int randNum) {
-        animA.SetInteger("Letter", randNum);
-    }
-    
-    private void SetUp2(int randNum) {
-        animB.SetInteger("Letter", randNum);
-    }
-    
-    private void SetUp3(int randNum) {
-        animC.SetInteger("Letter", randNum);
-    }
-    
-    private void ClickButton(int letterPos, int LETTER) {
-    
-        if (letterPos == 1) {
-            if (randNum1 == LETTER) {
-                a.color = Color.green;
-                //cauldron.SetTrigger("Correct");
-                //ADD HAPPY EFFECT
-                correctAns += 1;
-                //CORRECT sound
-                //Play the audio you attach to the AudioSource component
-                sfx.PlaySFX(correctLetter);
-            }
-            else {
-                a.color = Color.red;
-                //WRONG sound
-                //cauldron.SetTrigger("Incorrect");
-                //FAILURE EFFECT
-                //Play the audio you attach to the AudioSource component
-                sfx.PlaySFX(wrongLetter);
-            }
+        correctLetters = 0;
+
+        for (int i = 0; i < letters.Length; i++)
+        {
+            randLetters[i] = Random.Range(0, 5);
+            SetLetter(i, randLetters[i]);
         }
-        if (letterPos == 2) {
-            if (randNum2 == LETTER) {
-                b.color = Color.green;
+    }
+
+    private void SetLetter(int _letter, int _randNum)
+    {
+        letters[_letter].GetComponent<Animator>().SetInteger("Letter", _randNum);
+    }
+
+    private void ClickButton(int _letterPos, int _letter)
+    {
+        if (_letterPos < letters.Length)
+        {
+            if (randLetters[_letterPos] == _letter)
+            {
+                letters[_letterPos].GetComponent<SpriteRenderer>().color = Color.green;
+                //cauldron.SetTrigger("Correct");
+                //ADD HAPPY EFFECT
+                correctLetters++;
                 //CORRECT sound
                 //Play the audio you attach to the AudioSource component
                 sfx.PlaySFX(correctLetter);
-                //cauldron.SetTrigger("Correct");
-                //ADD HAPPY EFFECT
-                correctAns += 1;
             }
-            else {
-                b.color = Color.red;
-                //WRONG sound
-                //cauldron.SetTrigger("Incorrect");
-                //FAILURE EFFECT
-                //Play the audio you attach to the AudioSource component
-                sfx.PlaySFX(wrongLetter);
-            }
-        }
-        if (letterPos == 3) {
-            if (randNum3 == LETTER) {
-                c.color = Color.green;
-                //CORRECT sound
-                //cauldron.SetTrigger("Correct");
-                //ADD HAPPY EFFECT
-                correctAns += 1;
-                //Play the audio you attach to the AudioSource component
-                sfx.PlaySFX(correctLetter);
-            }
-            else {
-                c.color = Color.red;
+            else
+            {
+                letters[_letterPos].GetComponent<SpriteRenderer>().color = Color.red;
                 //WRONG sound
                 //cauldron.SetTrigger("Incorrect");
                 //FAILURE EFFECT
@@ -334,13 +284,13 @@ public class PotionMinigame : MonoBehaviour
             }
         }
     }
-    
+
     private void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         //float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-       // timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        // timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         timeText.text = string.Format("{00}", seconds);
     }
-  }
+}
