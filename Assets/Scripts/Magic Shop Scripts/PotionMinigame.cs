@@ -23,9 +23,9 @@ public class PotionMinigame : MonoBehaviour
     private int potionNum;
     private bool enterMinigame = false;
 
-    [Header("TIMER")]
-    public Text timeText;
+    [Header("TIMER & SCORE")]
     public GameObject timerObject;
+    public GameObject scoreObject;
     private float timeRemaining = 22;
     private bool timerIsRunning = false;
 
@@ -63,6 +63,7 @@ public class PotionMinigame : MonoBehaviour
             {
                 pressStart.SetActive(false);
                 timerObject.SetActive(true);
+                scoreObject.SetActive(true);
                 sfx.PlayMusic(music);
                 timerIsRunning = true;
 
@@ -152,8 +153,7 @@ public class PotionMinigame : MonoBehaviour
                     if (correctLetters == 3)
                     {
                         correctAnswers++;
-                        // TODO: Display progress
-                        Debug.Log("win condition: " + correctAnswers + "/" + requiredAnswersForWin);
+                        DisplayScore(correctAnswers);
                         if (correctAnswers < bubbles.Length)
                         {
                             bubbles[correctAnswers].SetActive(true);
@@ -196,6 +196,7 @@ public class PotionMinigame : MonoBehaviour
         }
 
         timerObject.SetActive(false);
+        scoreObject.SetActive(false);
     }
 
     public void RestartGame()
@@ -205,6 +206,7 @@ public class PotionMinigame : MonoBehaviour
         minigameCamera.SetActive(true);
         pressStart.SetActive(true);
         timerObject.SetActive(false);
+        scoreObject.SetActive(false);
 
         foreach (var key in letters)
         {
@@ -285,12 +287,17 @@ public class PotionMinigame : MonoBehaviour
         }
     }
 
+    private void DisplayScore(int _currentScore)
+    {
+        scoreObject.GetComponent<Text>().text = _currentScore + "/" + requiredAnswersForWin;
+    }
+
     private void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         //float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         // timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        timeText.text = string.Format("{00}", seconds);
+        timerObject.GetComponent<Text>().text = string.Format("{00}", seconds);
     }
 }
