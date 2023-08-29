@@ -30,54 +30,68 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    
+
+    bool canMove = true;
+
     //Animations
     public Animator anim;
     public SpriteRenderer theSR;
 
     public void Start()
-
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         readyToJump = true;
     }
 
-
     private void Update()
     {
+        if (canMove)
+        {
+            // ground check
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            MyInput();
+            SpeedControl();
 
-        MyInput();
-        SpeedControl();
+            // handle drag
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
 
-        // handle drag
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
-            
-        // animation
-        anim.SetBool("onGround", grounded);
-        
-        anim.SetFloat("moveSpeed", rb.velocity.magnitude);
-        
-        if (!theSR.flipX && horizontalInput < 0) {
-            theSR.flipX = true;
-        }
-        else if (theSR.flipX && horizontalInput > 0) {
-            theSR.flipX = false;
+            // animation
+            anim.SetBool("onGround", grounded);
+
+            anim.SetFloat("moveSpeed", rb.velocity.magnitude);
+
+            if (!theSR.flipX && horizontalInput < 0)
+            {
+                theSR.flipX = true;
+            }
+            else if (theSR.flipX && horizontalInput > 0)
+            {
+                theSR.flipX = false;
+            }
         }
     }
 
+    public void CannotMove()
+    {
+        canMove = false;
+        readyToJump = false;
+    }
+
+    public void CanMove()
+    {
+        canMove = true;
+        readyToJump = true;
+    }
 
     private void FixedUpdate()
     {
         MovePlayer();
     }
-
 
     private void MyInput()
     {
@@ -85,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -95,28 +109,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void MovePlayer()
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
-        if(grounded)
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
         // in air
-        else if(!grounded)
+        else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
-
 
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         // limit velocity if needed
-        if(flatVel.magnitude > moveSpeed)
+        if (flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
@@ -135,8 +147,9 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
-    
-    public void Dialog() {
+
+    public void Dialog()
+    {
         moveSpeed = 0.0f;
         readyToJump = false;
     }

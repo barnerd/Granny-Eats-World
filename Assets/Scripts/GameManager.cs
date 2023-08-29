@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance;
-    
+
     //FROG PRINCE
     public GameObject frogPrince;
     public GameObject frogPrinceFirstMeet;
@@ -29,19 +28,27 @@ public class GameManager : MonoBehaviour
     public GameObject darkWall;
     public GameObject endScreen;
     public GameObject endWall;
-    
+
     private bool endDemo = false;
 
+    public float timeForNextTeleportation;
+    public List<Signpost> ActiveSignposts { get; private set; }
+    public GameObject player;
 
-
-    private void Awake() {
+    private void Awake()
+    {
         instance = this;
+
+        ActiveSignposts = new List<Signpost>();
     }
-    
-    private void Update() {
-        if (endDemo == true) {
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space)) {
-                SceneManager.LoadScene(2);
+
+    private void Update()
+    {
+        if (endDemo)
+        {
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(3);
             }
         }
     }
@@ -50,8 +57,8 @@ public class GameManager : MonoBehaviour
     {
         pussFirstMeet.SetActive(false);
         pussSecondMeet.SetActive(true);
-        gretelFirstMeet.SetActive(false) ;
-        gretelSecondMeet.SetActive(true) ;
+        gretelFirstMeet.SetActive(false);
+        gretelSecondMeet.SetActive(true);
     }
 
     public void GetLantern()
@@ -86,8 +93,8 @@ public class GameManager : MonoBehaviour
         frogPrince.SetActive(false);
         hanselSecondMeet.SetActive(false);
         hanselThirdMeet.SetActive(true);
+        pussThirdMeet.SetActive(false);
         pussFourthMeet.SetActive(true);
-        pussThirdMeet.SetActive(true);
     }
 
     public void Endgame()
@@ -98,10 +105,18 @@ public class GameManager : MonoBehaviour
         gretelFourthMeet.SetActive(false);
         gretelFifthMeet.SetActive(true);
     }
-    
-    public void endingDemo() {
+
+    public void EndDemo()
+    {
+        Debug.Log("END");
+
         endScreen.SetActive(true);
         endDemo = true;
         Time.timeScale = 0f;
+    }
+
+    public void AddActiveSignpost(Signpost _signpost)
+    {
+        if (!ActiveSignposts.Contains(_signpost)) ActiveSignposts.Add(_signpost);
     }
 }
