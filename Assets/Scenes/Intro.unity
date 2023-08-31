@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930685543762f47489dbc7621635f572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 0
-  timer: 212
+  scene: 2
+  timer: 110
 --- !u!1 &630637865
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015801724}
   - component: {fileID: 1015801723}
+  - component: {fileID: 1015801725}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -436,7 +437,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -467,6 +468,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015801725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015801722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d77fe123c31949a19005efce5201325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoFileName: IntroVideo.mp4
 --- !u!1 &1559099063
 GameObject:
   m_ObjectHideFlags: 0
